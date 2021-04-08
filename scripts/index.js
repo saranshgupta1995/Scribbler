@@ -44,36 +44,7 @@ const renderFormInModal = type => {
   const formElements = FORMS[type];
 
   const form = createElem("form").addChildren(
-    formElements
-      .map(elem => {
-        let domRepresentation = null;
-
-        switch (elem.type) {
-          case "title":
-            domRepresentation = createElem("div", {
-              class: "title"
-            }).addChildren([
-              createElem(
-                "h2",
-                {},
-                {},
-                {
-                  innerText: elem.title
-                }
-              ),
-              createElem("i", {
-                class: "fa fa-times"
-              })
-            ]);
-            break;
-
-          default:
-            break;
-        }
-
-        return domRepresentation;
-      })
-      .filter(x => !!x)
+    formElements.map(elem => FORM_ELEMENTS[elem.type](elem)).filter(x => !!x)
   );
 
   createModal(type).addChildren(form);
