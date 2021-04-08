@@ -60,9 +60,18 @@ const FORM_ELEMENTS = {
           innerText: elem.title
         }
       ),
-      createElem("i", {
-        class: "fa fa-times"
-      })
+      createElem(
+        "i",
+        {
+          class: "fa fa-times"
+        },
+        {
+          onclick: () => {
+            const form = document.getElementById(`${elem.parentForm}-modal`);
+            form.parentElement.removeChild(form);
+          }
+        }
+      )
     ]);
   },
   submit: elem =>

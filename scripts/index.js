@@ -1,8 +1,11 @@
+let showForm = null;
+
 const FORMS = {
   signup: [
     {
       title: "Get Started",
-      type: "title"
+      type: "title",
+      parentForm: "signup"
     },
     {
       type: "text",
@@ -36,7 +39,8 @@ const FORMS = {
   signin: [
     {
       title: "Welcome Back!",
-      type: "title"
+      type: "title",
+      parentForm: "signin"
     },
     {
       type: "text",
@@ -71,7 +75,13 @@ const FORMS = {
             {
               class: "link"
             },
-            {},
+            {
+              onclick: () => {
+                const signinForm = document.getElementById("signin-modal");
+                signinForm.parentElement.removeChild(signinForm);
+                showForm("signup");
+              }
+            },
             {
               innerText: "Sign Up"
             }
@@ -105,4 +115,4 @@ const renderFormInModal = type => {
   createModal(type).addChildren(form);
 };
 
-renderFormInModal("signup");
+showForm = formName => renderFormInModal(formName);
