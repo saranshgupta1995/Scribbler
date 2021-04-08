@@ -88,6 +88,29 @@ const FORMS = {
           )
         ])
     }
+  ],
+  createpost: [
+    {
+      title: "Pen your post",
+      type: "title",
+      parentForm: "createpost"
+    },
+    {
+      type: "text",
+      label: "Title",
+      placeholder: "Enter title of your post",
+      required: true
+    },
+    {
+      type: "textarea",
+      label: "Contents",
+      placeholder: "Enter the contents of your post",
+      required: true
+    },
+    {
+      type: "submit",
+      text: "Create"
+    }
   ]
 };
 

@@ -103,7 +103,8 @@ form .form-input > * {
   border: none;
 }
 
-form .form-input > input {
+form .form-input > input,
+form .form-input > textarea {
   background: var(--modal-input-bg);
   padding: 8px 16px;
   border-radius: 4px;
@@ -140,6 +141,10 @@ form footer .link {
 }
 
 .home .modal {
-  max-width: 450px;
+  max-width: 950px;
   width: 100%;
+}
+
+#createpost-modal textarea {
+  height: 300px;
 }

@@ -76,5 +76,30 @@ const FORM_ELEMENTS = {
   },
   submit: elem =>
     createElem("button", {}, {}, { innerText: elem.text, type: "submit" }),
-  footer: elem => createElem("footer").addChildren(elem.html())
+  footer: elem => createElem("footer").addChildren(elem.html()),
+  textarea: elem => {
+    return createElem("div", {
+      class: "form-input textarea"
+    }).addChildren([
+      createElem(
+        "label",
+        {},
+        {},
+        {
+          innerText: elem.label
+        }
+      ),
+      createElem(
+        "textarea",
+        {
+          required: elem.required
+        },
+        {},
+        {
+          type: elem.type,
+          placeholder: elem.placeholder
+        }
+      )
+    ]);
+  }
 };
