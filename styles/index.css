@@ -1,3 +1,163 @@
+:root {
+  --blue: blue;
+  --white: #ffffff;
+  --modal-bg: #00000073;
+  --modal-text: #909193;
+  --modal-input-bg: #f1f1f1;
+  --submit-button-bg: #5db762;
+}
+
 html {
   font-family: "Montez", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
+
+body.home {
+  background: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.home main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home main button {
+  background: #d0b53b;
+  padding: 8px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.home main button a {
+  color: black;
+  text-decoration: none;
+}
+
+.home header button {
+  background: var(--blue);
+  color: white;
+  padding: 8px 12px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: 0;
+}
+
+.home header h1 {
+  color: var(--blue);
+}
+
+.modal-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--modal-bg);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-bg .modal {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 5px;
+  color: var(--modal-text);
+}
+
+form .title {
+  border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+form .title i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form .form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 16px; */
+}
+
+form .form-input > * {
+  border: none;
+}
+
+form .form-input > input,
+form .form-input > textarea {
+  background: var(--modal-input-bg);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+form .form-input > label {
+  margin-bottom: 10px;
+}
+
+form button[type="submit"] {
+  background: var(--submit-button-bg);
+  border: none;
+  color: var(--white);
+  width: 100%;
+  padding: 8px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+form > * {
+  margin-bottom: 16px;
+}
+
+form footer {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+form footer .link {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.home .modal {
+  max-width: 950px;
+  width: 100%;
+}
+
+#createpost-modal textarea {
+  height: 300px;
 }
