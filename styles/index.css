@@ -27,6 +27,8 @@ body.home {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .home header {
@@ -35,6 +37,13 @@ body.home {
   justify-content: space-between;
   padding: 10px 20px;
   box-sizing: border-box;
+}
+
+.home main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home header button {
@@ -78,9 +87,9 @@ form .title {
   padding-bottom: 8px;
 }
 
-form .title i{
-    font-size: 20px;
-    cursor: pointer;
+form .title i {
+  font-size: 20px;
+  cursor: pointer;
 }
 
 form .form-input {
@@ -118,16 +127,16 @@ form > * {
   margin-bottom: 16px;
 }
 
-form footer{
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    margin: 0;
+form footer {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin: 0;
 }
 
-form footer .link{
-    color: var(--blue);
-    cursor: pointer;
+form footer .link {
+  color: var(--blue);
+  cursor: pointer;
 }
 
 .home .modal {
