@@ -62,5 +62,6 @@ const FORM_ELEMENTS = {
     ]);
   },
   submit: elem =>
-    createElem("button", {}, {}, { innerText: elem.text, type: "submit" })
+    createElem("button", {}, {}, { innerText: elem.text, type: "submit" }),
+  footer: elem => createElem("footer").addChildren(elem.html())
 };

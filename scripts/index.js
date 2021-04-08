@@ -28,6 +28,50 @@ const FORMS = {
       type: "submit",
       text: "Signup"
     }
+  ],
+  signin: [
+    {
+      title: "Welcome Back!",
+      type: "title"
+    },
+    {
+      type: "text",
+      label: "Username",
+      placeholder: "Enter your username"
+    },
+    {
+      type: "password",
+      label: "Password",
+      placeholder: "Enter your password"
+    },
+    {
+      type: "submit",
+      text: "Signin"
+    },
+    {
+      type: "footer",
+      html: () =>
+        createElem("p").addChildren([
+          createElem(
+            "span",
+            {},
+            {},
+            {
+              innerText: "Not a member? "
+            }
+          ),
+          createElem(
+            "span",
+            {
+              class: "link"
+            },
+            {},
+            {
+              innerText: "Sign Up"
+            }
+          )
+        ])
+    }
   ]
 };
 
@@ -55,4 +99,4 @@ const renderFormInModal = type => {
   createModal(type).addChildren(form);
 };
 
-renderFormInModal("signup");
+renderFormInModal("signin");

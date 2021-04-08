@@ -78,6 +78,11 @@ form .title {
   padding-bottom: 8px;
 }
 
+form .title i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
 form .form-input {
   width: 100%;
   display: flex;
@@ -106,10 +111,23 @@ form button[type="submit"] {
   width: 100%;
   padding: 8px;
   margin-top: 24px;
+  cursor: pointer;
 }
 
 form > * {
   margin-bottom: 16px;
+}
+
+form footer{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+form footer .link{
+    color: var(--blue);
+    cursor: pointer;
 }
 
 .home .modal {
