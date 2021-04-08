@@ -61,5 +61,6 @@ const FORM_ELEMENTS = {
       })
     ]);
   },
-  submit: elem => null
+  submit: elem =>
+    createElem("button", {}, {}, { innerText: elem.text, type: "submit" })
 };

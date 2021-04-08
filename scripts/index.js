@@ -6,6 +6,11 @@ const FORMS = {
     },
     {
       type: "text",
+      label: "Name",
+      placeholder: "Enter your name"
+    },
+    {
+      type: "text",
       label: "Username",
       placeholder: "Enter your username"
     },
