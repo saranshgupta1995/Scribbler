@@ -7,22 +7,26 @@ const FORMS = {
     {
       type: "text",
       label: "Name",
-      placeholder: "Enter your name"
+      placeholder: "Enter your name",
+      required: true
     },
     {
       type: "text",
       label: "Username",
-      placeholder: "Enter your username"
+      placeholder: "Enter your username",
+      required: true
     },
     {
       type: "password",
       label: "Password",
-      placeholder: "Enter your password"
+      placeholder: "Enter your password",
+      required: true
     },
     {
       type: "password",
       label: "Confirm Password",
-      placeholder: "Re-enter your password"
+      placeholder: "Re-enter your password",
+      required: true
     },
     {
       type: "submit",
@@ -37,12 +41,14 @@ const FORMS = {
     {
       type: "text",
       label: "Username",
-      placeholder: "Enter your username"
+      placeholder: "Enter your username",
+      required: true
     },
     {
       type: "password",
       label: "Password",
-      placeholder: "Enter your password"
+      placeholder: "Enter your password",
+      required: true
     },
     {
       type: "submit",
@@ -99,4 +105,4 @@ const renderFormInModal = type => {
   createModal(type).addChildren(form);
 };
 
-renderFormInModal("signin");
+renderFormInModal("signup");

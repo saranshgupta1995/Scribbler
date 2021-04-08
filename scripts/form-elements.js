@@ -13,7 +13,9 @@ const FORM_ELEMENTS = {
       ),
       createElem(
         "input",
-        {},
+        {
+          required: elem.required
+        },
         {},
         {
           type: elem.type,
@@ -36,7 +38,9 @@ const FORM_ELEMENTS = {
       ),
       createElem(
         "input",
-        {},
+        {
+          required: elem.required
+        },
         {},
         {
           type: elem.type,
